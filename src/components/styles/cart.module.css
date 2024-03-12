@@ -1,0 +1,36 @@
+.container {
+    width: 30%;
+    height: 70%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgb(246, 243, 243);
+    z-index: 3;
+}
+#CartExitIcon {
+    margin: 20px;
+}
+.centre {
+    display: flex;
+    margin-top: 40%;
+    justify-content: center;
+}
+#button{
+    appearance: none;
+    margin: 0;
+    margin-top: 20px;
+    padding: 6px;
+    font-family: inherit;
+    font-size: 1rem; /* Set your desired font size */
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 20px;
+    border: rgb(89, 92, 92) 2px solid ;
+    color: rgb(89, 92, 92);
+}
+p{
+    text-align: center;
+}
+/* .cartContents{
+
+} */

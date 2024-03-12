@@ -4,7 +4,6 @@
   left: 0;
   width: 100%;
   background-color: transparent;
-  z-index: 1000; /* Make sure it has a higher z-index than other elements */
   padding: 30px;
   padding-left: 40px;
   padding-right: 40px;
