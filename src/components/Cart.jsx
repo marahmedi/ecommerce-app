@@ -1,7 +1,11 @@
 import React from "react";
 import styles from "./styles/cart.module.css";
+import { useDispatch } from "react-redux";
+import { toggleCartNav } from "../redux/actions/uiActions";
 
-const Cart = ({setShowCart}) => {
+const Cart = () => {
+    const dispatch = useDispatch()
+
   return (
     <div className={styles.container}>
       <img
@@ -9,7 +13,7 @@ const Cart = ({setShowCart}) => {
         alt="exit icon"
         style={{ width: "25px", height: "25px", cursor: 'pointer'}}
         id={styles.CartExitIcon}
-        onClick={() => setShowCart(false)}
+        onClick={() => dispatch(toggleCartNav)}
       />
 
       <div className={styles.centre}>

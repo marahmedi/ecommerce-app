@@ -1,21 +1,22 @@
 import './App.css';
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import Header from './components/Header';
 import Cart from './components/Cart';
 import Nav from './components/Nav';
 import ProductListing from './pages/ProductListing';
 
+
 function App() {
 
-  const [showCart, setShowCart] = useState(false)
-  const [showNav, setShowNav] = useState(false)
-
+  const isNavOpen = useSelector(state => state.isNavOpen)
+  console.log(isNavOpen)
+  const isCartNavOpen = useSelector(state => state.isCartNavOpen)
 
   return (
     <div className="App">
-    <Header setShowCart={setShowCart} setShowNav={setShowNav}/>
-    {showNav && <Nav setShowNav={setShowNav}/>}
-    {showCart && <Cart setShowCart={setShowCart}/>}
+    <Header/>
+    {isNavOpen && <Nav/>}
+    {isCartNavOpen && <Cart/>}
     <ProductListing/>
     </div>
   );
