@@ -1,6 +1,4 @@
 import { createStore } from "redux";
-import uiReducer from "../reducers/uiReducer";
+import reducers from "../reducers";
 
-const store = createStore(uiReducer)
-
-export default store;
+export const store = createStore(reducers);

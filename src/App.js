@@ -1,23 +1,28 @@
-import './App.css';
-import { useSelector } from 'react-redux';
-import Header from './components/Header';
-import Cart from './components/Cart';
-import Nav from './components/Nav';
-import ProductListing from './pages/ProductListing';
-
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ProductDisplay from "./pages/ProductDisplay";
+import CartPage from "./pages/CartPage";
+import ProductListing from "./pages/ProductListing";
 
 function App() {
-
-  const isNavOpen = useSelector(state => state.isNavOpen)
-  console.log(isNavOpen)
-  const isCartNavOpen = useSelector(state => state.isCartNavOpen)
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <ProductListing />,
+    },
+    {
+      path: "/product",
+      element: <ProductDisplay />,
+    },
+    {
+      path: "/cart",
+      element: <CartPage />,
+    },
+  ]);
 
   return (
     <div className="App">
-    <Header/>
-    {isNavOpen && <Nav/>}
-    {isCartNavOpen && <Cart/>}
-    <ProductListing/>
+      <RouterProvider router={router} />
     </div>
   );
 }

@@ -19,9 +19,6 @@ const Product = () => {
     fetchData();
   }, []);
 
-  console.log(data)
-
-
   return (
     <div className={styles.container}>
       <img src={data.image} style={{ width: "150px", height: "150px"}}></img>
