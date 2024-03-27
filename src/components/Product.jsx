@@ -8,7 +8,7 @@ const Product = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://fakestoreapi.com/products/1");
+        const response = await fetch("https://fakestoreapi.com/products/5");
         const jsonData = await response.json();
         setData(jsonData);
       } catch (error) {
